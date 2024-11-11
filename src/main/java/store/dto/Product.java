@@ -21,6 +21,9 @@ public class Product {
 
     @Override
     public String toString(){
+        if (quantity == 0){
+            return "- " + name + " " + price + "원 재고 없음";
+        }
         if (promotion.equals("null")) {
             return "- " + name + " " + price + "원 " + quantity + "개";
         }
